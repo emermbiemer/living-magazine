@@ -11,9 +11,6 @@ Thumbs.db
 # Backup files
 backup/
 
-# Local development files
-.qodo/
-
 # Logs
 *.log
 npm-debug.log*
