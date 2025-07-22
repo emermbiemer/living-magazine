@@ -4,8 +4,9 @@
     --font-main: 'Helvetica Neue', sans-serif;
     --color-text: #000000;
     --color-bg: #ffffff;
-    --color-accent: #E50914; /* A classic, bold red */
-    --grid-gap: 1.5rem;
+    --color-accent: #FF2D00; /* Bright Swiss red */
+    --grid-gap: 2rem;
+    --grid-column: 8.33%;
 }
 
 * {
@@ -155,12 +156,14 @@ body.preloader-active {
 }
 
 .header-title {
-    font-size: 12vw;
-    line-height: 0.9;
+    font-size: 14vw;
+    line-height: 0.85;
     font-weight: 700;
+    letter-spacing: -0.05em;
     text-transform: uppercase;
     color: var(--color-bg);
     mix-blend-mode: difference;
+    margin-left: -0.5rem;
 }
 
 .page-wrapper {
@@ -195,18 +198,21 @@ body.preloader-active {
 
 .section-title {
     grid-column: 1 / -1;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
     padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
+    margin-top: 3rem;
 }
 
 .article-lead p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-weight: 300;
+    font-size: 1.75rem;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .article-body p {
@@ -218,24 +224,62 @@ body.preloader-active {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--grid-gap);
     align-items: center;
+    margin: 2rem 0;
 }
 
 .image-collage img {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
     display: block;
 }
 
 .image-collage .img-large {
     grid-row: span 2;
+    height: 820px;
+}
+
+.full-width-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+
+.side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gap);
+    margin: 2rem 0;
+}
+
+.side-by-side img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .pull-quote {
     grid-column: 1 / span 8;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
     color: var(--color-accent);
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 
 .site-footer {
@@ -244,4 +288,6 @@ body.preloader-active {
     color: var(--color-bg);
     text-align: center;
     font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
